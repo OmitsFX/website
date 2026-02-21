@@ -1,4 +1,4 @@
-import type { CollectionConfig, TypedLocale } from 'payload'
+import type { CollectionConfig } from 'payload'
 import { slugField } from '@/fields/slug'
 
 export const Posts: CollectionConfig = {

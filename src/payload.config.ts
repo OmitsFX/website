@@ -65,6 +65,9 @@ export default buildConfig({
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },
   db: sqliteD1Adapter({ binding: cloudflare.env.D1 }),
+  graphQL: {
+    disable: true,
+  },
   plugins: [
     r2Storage({
       bucket: cloudflare.env.R2,

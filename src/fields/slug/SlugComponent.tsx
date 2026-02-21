@@ -42,7 +42,8 @@ export const SlugComponent: TextFieldClientComponent = ({ path, field }) => {
         titleToUse = title
       } else if (typeof title === 'object' && title !== null) {
         // If localized, prioritize 'en' as requested
-        titleToUse = (title as any).en || Object.values(title)[0] || ''
+        const titleObj = title as Record<string, string>
+        titleToUse = titleObj.en || Object.values(titleObj)[0] || ''
       }
       
       if (titleToUse) {
